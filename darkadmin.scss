@@ -726,6 +726,10 @@ body .selectize-dropdown {
 	
 	.gpm-item-info {
 		border-bottom: 1px solid $border;
+		
+		.gpm-item-icon {
+			color: rgba($font, 0.1);
+		}
 	}
 }
 
