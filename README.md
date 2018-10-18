@@ -1,6 +1,6 @@
 # Grav Darkadmin Plugin
 
-I modified Romain Fallets **customadmin plugin**.
+I modified Romain Fallets **customadmin plugin**.  
 [Check it out here](https://github.com/RomainFallet/grav-plugin-customadmin)
 
 Of course, this plugin has the same requirements as Romains:
