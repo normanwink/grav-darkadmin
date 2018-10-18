@@ -1,0 +1,16 @@
+name: Dark Admin
+version: 1.0.0
+description: Modified customadmin plugin to have a nice dark theme matching MacOS Mojave. Special thanks to Romain Fallet, who created the customadmin plugin.
+icon: empire
+author:
+  name: Norman Wink
+  email: nw@vonheldenundgestalten.de
+  url: vonheldenundgestalten.de
+homepage: https://github.com/numee/grav-plugin-customadmin
+keywords: admin, plugin, manager, panel, custom, dark, mojave
+bugs: https://github.com/numee/grav-plugin-customadmin/issues
+readme: https://github.com/numee/grav-plugin-customadmin/README.md
+license: MIT
+
+dependencies:
+  - admin

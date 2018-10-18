@@ -1,0 +1,888 @@
+$dark: #212224;
+$light: #2b2c2e;
+$bars: #2c2d30;
+$border: #515153;
+$input: #68696b;
+$font: #ffffff;
+$border-radius: 4px;
+$note: #06A599;
+
+// syntax hilighting
+$mark: #fccb66;
+$imp: #f8444e;
+$url: #1f8fd5;
+$str: #b8ce59;
+$var: #f93df3;
+
+pre {
+	background: $input;
+	color: $font;
+	border: 1px solid $border;
+	border-radius: $border-radius;
+}
+
+body {
+	background: $dark;
+	color: $font;
+	
+	.bootstrap-datetimepicker-widget {
+		&.dropdown-menu {
+			border-color: $border;
+			background: $light;
+		
+			&.bottom {
+				&:before {
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-bottom: 7px solid $light;
+					border-bottom-color: rgba(0,0,0,0.2);
+				}
+				
+				&:after {
+					border-left: 6px solid transparent;
+					border-right: 6px solid transparent;
+					border-bottom: 6px solid $light;
+				}
+			}
+		}
+		
+		table {
+			td span,
+			th,
+			td.day {
+				&:hover {
+					background: $dark !important;
+				}
+			}
+			
+			td {
+				&.active,
+				&.active:hover {
+					background: $dark;
+				}
+			}
+			
+			.active {
+				color: $imp !important;
+			}
+		}
+	}
+}
+
+blockquote {
+	background: none;
+	border-color: $border;
+	
+	p {
+		color: darken($font, 20%);
+	}
+}
+
+.notice,
+.note {
+	background: $bars;
+}
+
+.info {
+	background: $dark;
+	border: 1px solid $var;
+}
+
+td {
+	border-color: $border;
+}
+
+.fa {
+	color: $font;
+}
+
+#admin-dashboard {
+	.primary-accent {
+		background: $light;
+		
+		.button-bar {
+			background: $dark;
+		}
+		
+		.ct-bar {
+			stroke: rgba($url, 0.8) !important;
+		}
+	}
+	.secondary-accent {
+		background: $light;
+		
+		.button-bar {
+			background: $dark;
+		}
+		
+		.ct-chart {
+			.ct-series {
+				&.ct-series-a {
+					.ct-slice-donut {
+						stroke: $note !important;
+					}
+				}
+			}
+		}
+	}
+	
+	.admin-block {
+		li {
+			border-color: $border;
+		}
+	}
+}
+
+.ct-grid {
+	stroke: rgba($font, 0.2);
+}
+
+.ct-label {
+	fill: $font;
+	color: $font;
+}
+
+#admin-main {
+	.admin-block {
+		background: $light;
+		color: $font;
+		
+		a {
+			color: $font;
+			
+			&:hover {
+				color: darken($font, 10%);
+			}
+		}
+		
+		td {
+			&.double {
+				a,
+				a:hover {
+					color: $url;
+				}
+			}
+		}
+	}
+	
+	.titlebar {
+		background: $bars;
+		color: $font;
+		border-bottom: 1px solid $border;
+	}
+	
+	#admin-topbar {
+		background: none;
+	}
+	
+	.form-tabs {
+		background: none;
+		
+		.tabs-content {
+			background: $light;
+		}
+		
+		.tabs-nav {
+			a {
+				color: $font;
+				background: $dark;
+				
+				&.active {
+					background: $light;
+					color: $font;
+				}
+				
+				&:hover {
+					background: darken($light, 2%);
+					color: $font;
+				}
+			}
+		}
+	}
+	
+	.grav-editor-toolbar {
+		border: 1px solid $border;
+		background: $light;
+		
+		ul {
+			a {
+				&:hover,
+				&:focus {
+					background: $dark;
+					color: $font;
+				}
+			}
+			
+			.button-disabled {
+				a {
+					.fa {
+						color: rgba($font, 0.5);
+					}
+					
+					&:hover,
+					&:focus {
+						background: $dark;
+						.fa {
+							color: rgba($font, 0.5);
+						}
+					}
+				}
+			}
+		}
+		
+		.dropdown-menu {
+			border-color: $border;
+			background: $light;
+		}
+	}
+	
+	.admin-block {
+		h1 {
+			color: $font;
+			margin-top: 3em;
+			border-color: $border;
+		}
+	}
+	
+	.switch-grav {
+		background: $dark;
+		border-color: $border;
+		
+		&:hover {
+			background: lighten($dark, 2%);
+		}
+		
+		&.switch-toggle {
+			input {
+				&:checked {
+					+ label {
+						background: $input;
+					}
+				}
+			}
+		}
+		
+		input {
+			&[value="1"],
+			&[value="true"] {
+				&:checked + label {
+					background: $note;
+				}
+			}
+			&[value="0"],
+			&[value="false"] {
+				&:checked + label {
+					background: $imp;
+				}
+			}
+		}
+	}
+	
+	.switch-toggle {
+		input {
+			+label {
+				color: $font;
+			}
+		}
+	}
+	
+	.danger,
+	.success {
+		&.button-bar {
+			background: $light;
+		}
+	}
+	
+	#notifications {
+		.badge {
+			&.alert {
+				&.note {
+					background: $dark;
+					border: 1px solid $note;
+				}
+			}
+		}
+	}
+}
+
+.grav-editor-content,
+.grav-editor-preview {
+	border-color: $border;
+}
+
+.pages-list {
+	border-top-color: $border;
+
+	.page-item {
+		background: $light;
+		
+	}
+	.row {
+		border-bottom-color: $border;
+		// border-bottom: none;
+		
+		&:hover {
+			background: $dark;
+		}
+		
+		p {
+			&.page-route {
+				color: rgba($font, 0.5);
+			}
+		}
+	}
+	
+	.page-icon {
+		color: $url;
+		
+		.not-routable {
+			color: $imp;
+		}
+		
+		.not-visible {
+			color: $str;
+		}
+		
+		&.modular {
+			color: $var;
+		}
+	}
+}
+
+.default-box-shadow {
+	border: 1px solid $border;
+	border-radius: $border-radius;
+	overflow: hidden;
+}
+
+form {
+	.selectize-control {
+		&.single,
+		&.multi {
+			.selectize-input,
+			.selectize-input.full,
+			.selectize-input.items,
+			.selectize-input.active {
+				color: $font;
+				border-color: $border;
+				background-color: $input;
+			}
+		}
+		
+		&.multi {
+			.selectize-input {
+				> div {
+					background: $light;
+					
+					&.active {
+						background: $note;
+					}
+				}
+			}
+		}
+	}
+	
+	input {
+		&[type=text],
+		&[type=password],
+		&[type=email],
+		&[type=date],
+		&[type=tel],
+		&[type=time],
+		&[type=week],
+		&[type=month],
+		&[type=number],
+		&[type=color],
+		&[type=url] {
+			color: $font;
+			border-color: $border;
+			background-color: $input;
+		}
+	}
+	
+	textarea {
+		color: $font;
+		border-color: $border;
+		background: $input;
+	}
+	
+	.checkboxes {
+		label {
+			&:before {
+				background: $input;
+				border-color: $border;
+			}
+		}
+		
+		input[type=checkbox] {
+			&:checked {
+				+ label {
+					&:before {
+						line-height: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+	
+	.form-input-file {
+		border: 1px solid $border;
+	}
+	
+	.form-label,
+	label {
+		color: rgba($font, 0.8);
+	}
+	
+	.form-input-wrapper {
+		.form-input-addon {
+			border-color: $border;
+			background: $light;
+		}
+	}
+	
+	.button-bar {
+		background: $light;
+	}
+	
+	h1, h3 {
+		border-color: $border;
+		border-width: 1px;
+	}
+	
+	h1, h2, h3, h4, h5 {
+		color: $font;
+	}
+}
+
+#page-filtering {
+	.selectize-control {
+		&.multi {
+			.selectize-input {
+				.item,
+				.item.active {
+					background: $light;
+					color: rgba($font, 0.5);
+				}
+			}
+		}
+	}
+}
+
+.selectize-input {
+	&.full {
+		background: $input;
+		color: $font;
+		border-color: $border;
+	}
+	&.dropdown-active {
+		&:before {
+			background: $border;
+		}
+	}
+}
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+	background: $dark;
+	color: $font;
+}
+
+input[type=range].rangefield {
+	&:focus {
+		// outline: none;
+	}
+	&::-webkit-slider-runnable-track {
+		background: $input;
+		border: 1px solid $border;
+	}
+	&::-webkit-slider-thumb {
+		background: $note;
+		border: 1px solid $border;
+	}
+	&::-moz-focus-outer {
+		// border: 0;
+	}
+	&::-moz-range-track {
+		background: $input;
+		border: 1px solid $border;
+	}
+	&::-moz-range-thumb {
+		background: $str;
+		border: 1px solid $border;
+	}
+}
+
+.dropzone {
+	background: $input;
+	border-color: $border;
+	
+	&.dz-clickable {
+		.dz-message,
+		.dz-message span {
+			color: rgba($font, 0.5);
+		}
+	}
+	
+	.dz-preview {
+		border-color: $border;
+		
+		.dz-details {
+			background: $dark;
+		}
+	
+		.dz-remove,
+		.dz-unset,
+		.dz-view,
+		.dz-insert,
+		.dz-metadata {
+			background: $dark;
+			color: $font;
+		}
+		
+		.dz-remove {
+			&:hover {
+				color: $imp;
+			}
+		}
+		
+		.dz-unset,
+		.dz-view,
+		.dz-insert,
+		.dz-metadata {
+			&:hover {
+				color: $str;
+			}
+		}
+	}
+}
+
+body .selectize-dropdown {
+	border: 1px solid $border;
+	background: $light;
+	border-top: 0 none;
+	color: $font;
+	
+	[data-selectable] {
+		&:hover {
+			background: darken($dark, 5%);
+			color: $font;
+		}
+	}
+	
+	&.plugin-optgroup_columns {
+		.optgroup {
+			border-right: 1px solid $border;
+		}
+	}
+	
+	.optgroup-header {
+		color: $font;
+		border-bottom: 1px solid $border;
+		background-color: $light;
+	}
+	
+	.active {
+		background: darken($dark, 5%);
+		color: $font;
+	}
+}
+
+.CodeMirror {
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+}
+
+.cm-s-paper {
+	&.CodeMirror {
+		background: $input;
+		color: $font;
+	}
+	
+	.cm-header,
+	.cm-strong,
+	.cm-em,
+	.cm-strikethrough,
+	.cm-quote {
+		color: $mark;
+	}
+	
+	.cm-link,
+	.cm-url {
+		color: $url;
+	}
+	
+	.cm-image-marker {
+		color: $imp;
+	}
+	
+	.cm-image-alt-text {
+		color: $str;
+	}
+}
+
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+	background: $input;
+}
+
+.grav-editor {
+	.CodeMirror-scroll {
+		// padding-bottom: 0px;
+	}
+}
+
+.grav-editor-resizer {
+	background-color: $border;
+	background-image: -webkit-linear-gradient(top, $border 0%,$border 20%,darken($border, 10%) 20%,darken($border, 10%) 40%,$border 40%,$border 60%,darken($border, 10%) 60%,darken($border, 10%) 80%,$border 80%,$border 100%);
+	background-image: linear-gradient(to bottom,$border 0%,$border 20%,darken($border, 10%) 20%,darken($border, 10%) 40%,$border 40%,$border 60%,darken($border, 10%) 60%,darken($border, 10%) 80%,$border 80%,$border 100%);
+}
+
+.form-order-wrapper {
+	ul {
+		&.orderable {
+			li {
+				border-color: $border;
+				background: $light;
+				color: $font;
+				
+				&:hover {
+					background: $dark;
+				}
+				
+				&[data-active-id] {
+					border-color: $imp;
+				}
+				
+				&.drag-handle {
+					background: $light;
+					color: $font;
+				}
+			}
+		}
+	}
+}
+
+.form-list-wrapper {
+	ul {
+		&[data-collection-holder] {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			
+			> li {
+				border-color: $border;
+				background: $light;
+				color: $font;
+			}
+		}
+	}
+	
+	.collection-sort {
+		background: $dark;
+		border-right-color: $border;
+	}
+}
+
+#phpinfo {
+	th {
+		background: $light;
+	}
+	td {
+		&:first-child {
+			color: darken($font, 10%);
+		}
+	}
+}
+
+.gpm {
+	> table {
+		> tbody {
+			> tr {
+				border-color: $border;
+				
+				&:hover {
+					background: $dark;
+				}
+			}
+		}
+	}
+
+	.sort-actions {
+		bottom: 1em;
+		position: relative;
+	}
+	
+	.gpm-item-info {
+		border-bottom: 1px solid $border;
+	}
+}
+
+tr {
+	td {
+		&.gpm-details {
+			background: $light;
+		}
+	}
+}
+
+.toast {
+	background: $dark;
+	
+	&-success {
+		border: 1px solid $str;
+	}
+	
+	&-error {
+		border: 1px solid $imp;
+	}
+}
+
+#admin-sidebar {
+	background: $light;
+	border-right: 1px solid $border;
+}
+
+#open-handle {
+	background: $dark;
+	border-left: none;
+	border-bottom: 1px solid $border;
+}
+
+#admin-logo {
+	background: $bars;
+	border-bottom: 1px solid $border;
+}
+
+#offline-status {
+	background: $imp;
+}
+
+#admin-user-details,
+.admin-user-details {
+	border-color: $border;
+}
+
+#admin-nav-quick-tray {
+	background: $dark;
+	border-color: $border;
+}
+
+#admin-menu {
+	li {
+		&.selected {
+			a {
+				background: $light;
+				border-color: $imp;
+			}
+		}
+		
+		a {
+			&:hover {
+				background: darken($light, 2%);
+			}
+		}
+	}
+}
+
+#admin-login-wrapper {
+	background: $dark;
+}
+
+#admin-login {
+	background: $light;
+	
+	.form-actions {
+		&.primary-accent {
+			background: $bars;
+			border-top: 1px solid $border;
+		}
+	}
+	
+	form {
+		input {
+			color: $font;
+			border-color: $border;
+			background-color: $input;
+		}
+	}
+}
+
+.primary-accent,
+#admin-main .titlebar .button-bar,
+#admin-main .admin-block {
+	.button {
+		background: $dark;
+		border: 1px solid $url;
+		
+		&:hover {
+			background: lighten($dark, 2%);
+		}
+	}
+}
+
+.button-group {
+	.dropdown-menu {
+		background: $dark;
+		border: 1px solid $border;
+		
+		li {
+			> a {
+				&:focus,
+				&:hover {
+					background: lighten($dark, 2%);
+				}
+			}
+		}
+	}
+}
+
+.danger {
+	.button {
+		border-color: $imp !important;
+	}
+}
+
+.secondary-accent {
+	.button {
+		background: $dark;
+		border: 1px solid $note;
+		
+		&:hover {
+			background: lighten($dark, 2%);
+		}
+	}
+}
+
+.badge {
+	background: $dark;
+}
+
+.remodal {
+	background: $light;
+	color: $font;
+	
+	&-overlay {
+		background: rgba($dark, 0.8);
+	}
+}
+
+.card-item {
+	background: $bars;
+	border: 1px solid $border;
+	border-radius: $border-radius;
+	
+	.gpm-actions {
+		background: $light;
+		
+		&:hover {
+			background: darken($light, 2%);
+		}
+	}
+	
+	&.active-theme {
+		border: 1px solid $var;
+		
+		.gpm-actions {
+			background: $dark;
+		}
+	}
+}
