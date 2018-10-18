@@ -6,10 +6,10 @@ author:
   name: Norman Wink
   email: nw@vonheldenundgestalten.de
   url: vonheldenundgestalten.de
-homepage: https://github.com/numee/grav-plugin-customadmin
+homepage: https://github.com/normanwink/grav-darkadmin
 keywords: admin, plugin, manager, panel, custom, dark, mojave
-bugs: https://github.com/numee/grav-plugin-customadmin/issues
-readme: https://github.com/numee/grav-plugin-customadmin/README.md
+bugs: https://github.com/normanwink/grav-darkadmin/issues
+readme: https://github.com/normanwink/grav-darkadmin/README.md
 license: MIT
 
 dependencies:
