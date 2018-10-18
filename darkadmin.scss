@@ -309,13 +309,13 @@ td {
 		&[value="1"],
 		&[value="true"] {
 			&:checked + label {
-				background: $note;
+				background: $note !important;
 			}
 		}
 		&[value="0"],
 		&[value="false"] {
 			&:checked + label {
-				background: $imp;
+				background: $imp !important;
 			}
 		}
 	}
