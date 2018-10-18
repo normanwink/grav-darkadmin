@@ -260,21 +260,6 @@ td {
 				}
 			}
 		}
-		
-		input {
-			&[value="1"],
-			&[value="true"] {
-				&:checked + label {
-					background: $note;
-				}
-			}
-			&[value="0"],
-			&[value="false"] {
-				&:checked + label {
-					background: $imp;
-				}
-			}
-		}
 	}
 	
 	.switch-toggle {
@@ -299,6 +284,38 @@ td {
 					background: $dark;
 					border: 1px solid $note;
 				}
+			}
+		}
+	}
+}
+
+.switch-grav {
+	background: $dark;
+	border-color: $border;
+	
+	&.switch-toggle {
+		input {
+			&.highlight {
+				&:checked {
+					+ label {
+						background: $input;
+					}
+				}
+			}
+		}
+	}
+	
+	input {
+		&[value="1"],
+		&[value="true"] {
+			&:checked + label {
+				background: $note;
+			}
+		}
+		&[value="0"],
+		&[value="false"] {
+			&:checked + label {
+				background: $imp;
 			}
 		}
 	}
@@ -802,16 +819,15 @@ tr {
 	}
 }
 
-.primary-accent,
-#admin-main .titlebar .button-bar,
-#admin-main .admin-block {
-	.button {
-		background: $dark;
-		border: 1px solid $url;
-		
-		&:hover {
-			background: lighten($dark, 2%);
-		}
+.primary-accent .button,
+.button.primary,
+#admin-main .titlebar .button-bar .button,
+#admin-main .admin-block .button {
+	background: $dark;
+	border: 1px solid $url;
+	
+	&:hover {
+		background: lighten($dark, 2%);
 	}
 }
 
@@ -831,12 +847,6 @@ tr {
 	}
 }
 
-.danger {
-	.button {
-		border-color: $imp !important;
-	}
-}
-
 .secondary-accent {
 	.button {
 		background: $dark;
@@ -845,6 +855,26 @@ tr {
 		&:hover {
 			background: lighten($dark, 2%);
 		}
+	}
+}
+
+.dropdown-menu {
+	.button {
+		border: none !important;
+		border-radius: 0px !important;
+		padding: 3px 20px !important;
+		background: $dark;
+		
+		&:focus,
+		&:hover {
+			background: lighten($dark, 2%);
+		}
+	}
+}
+
+.danger {
+	.button {
+		border-color: $imp !important;
 	}
 }
 
