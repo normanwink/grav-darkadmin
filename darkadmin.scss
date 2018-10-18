@@ -239,7 +239,6 @@ td {
 	.admin-block {
 		h1 {
 			color: $font;
-			margin-top: 3em;
 			border-color: $border;
 		}
 	}
@@ -665,9 +664,6 @@ body .selectize-dropdown {
 .form-list-wrapper {
 	ul {
 		&[data-collection-holder] {
-			margin-top: 1em;
-			margin-bottom: 1em;
-			
 			> li {
 				border-color: $border;
 				background: $light;
