@@ -916,3 +916,44 @@ tr {
 		}
 	}
 }
+
+
+/*
+ * improvements in GRAV v1.6.18+ - Admin v1.9.+
+ * @since 01.03.2020
+ * @author Patrick Meppe
+ * - configuration
+ * - markdown WYSIWYG
+ * - scrollbars
+ */
+$color_bg: #2b2b2b;
+$color_grey: grey;
+main#admin-main {	
+	.form-tabs.side-tabs > .tabs-nav a:hover { color: $color_grey; }
+	.fa { color: inherit } //undo the error made by darkadmin
+	.grav-editor-toolbar ul .editor-active a {
+		cursor: auto;
+		background: lighten($color_bg, 20%);
+		border-top: 1px solid lighten($color_bg, 20%);
+		border-left: 1px solid lighten($color_bg, 20%);
+		border-right: 1px solid lighten($color_bg, 20%);
+	}
+	.grav-editor-preview { color: $color_bg; }
+	div.cm-s-paper {
+		&.CodeMirror {
+			background: #1E1E1E;
+			color: #A9B7C6;
+
+			div.CodeMirror-cursor { border-left-color: $color_grey; }
+		}
+		
+		.cm-comment { color: #5E993E }
+		.cm-tag { color: #3F9CCC }
+		.cm-attribute { color: #8CDCDD }
+		.cm-string { color: #CE916A }
+	}
+	//.CodeMirror-scroll, .CodeMirror-sizer
+
+	i.gpm-item-icon.fa { color: $color_grey }
+	div.gm-scrollbar > div.thumb { background-color: $color_grey }
+}
